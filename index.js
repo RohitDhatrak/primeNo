@@ -44,7 +44,7 @@ function verifyInput(){
 function checkPrimeNO() {
   if(date[0] % 2 == 0)
     return chalk.red(name + " your birthday isn't a prime number");
-  for(let i = 0; i <= Math.sqrt(date[0]); i++){
+  for(let i = 3; i <= Math.sqrt(date[0]); i++){
     if(date[0] % i == 0)
       return chalk.red(name + " your birthday isn't a prime number");
   }
