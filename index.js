@@ -17,19 +17,15 @@ function verifyInput(){
   date[0] = parseInt(date[0]);
   date[1] = parseInt(date[1]);
 
-  if(d.length > 5)
-    return 0;
-
-  if(isNaN(date[0]) || isNaN(date[1]))
-    return 0;
-
-  if(date[0] == 0 || date[1] == 0)
-    return 0;
-
-  if(date[1] > 12)
-    return 0;
-
-  if(date[0] > 31)
+  if (
+    d.length > 5 ||
+    isNaN(date[0]) ||
+    isNaN(date[1]) ||
+    date[0] == 0 ||
+    date[1] == 0 ||
+    date[1] > 12 ||
+    date[0] > 31
+  )
     return 0;
 
   if(date[1] == 6 || date[1] == 9 || date[1] == 11 || date[1] == 4 && date[0] > 30)
