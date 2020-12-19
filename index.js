@@ -38,13 +38,13 @@ function verifyInput(){
 }
 
 function checkPrimeNO() {
-  if(date[0] % 2 == 0)
-    return chalk.red(name + " your birthday isn't a prime number");
-  for(let i = 3; i <= Math.sqrt(date[0]); i++){
-    if(date[0] % i == 0)
-      return chalk.red(name + " your birthday isn't a prime number");
+  if (date[0] == 2) 
+    return chalk.green(name + " your birthday is a prime no!!");
+  for (let i = 2; i <= Math.sqrt(date[0]); i++) {
+    if (date[0] % i == 0) 
+      return chalk.red(name + " your birthday isn't a prime no");
   }
-  return chalk.green(name + " your birthday is a prime number!!");      
+  return chalk.green(name + " your birthday is a prime number!!");
 }
 
 console.log("\n" + checkPrimeNO());
