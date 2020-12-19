@@ -28,7 +28,7 @@ function verifyInput(){
   )
     return 0;
 
-  if(date[1] == 6 || date[1] == 9 || date[1] == 11 || date[1] == 4 && date[0] > 30)
+  if((date[1] == 6 || date[1] == 9 || date[1] == 11 || date[1] == 4) && date[0] > 30)
     return 0;
 
   if (date[1] == 2 && date[0] > 28)
